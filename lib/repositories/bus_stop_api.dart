@@ -10,7 +10,8 @@ class BusStopAPI extends BusStopsRepository {
     try {
       var response =
           await Dio().get('https://data.etabus.gov.hk/v1/transport/kmb/route/');
-      var list = response.data as List;
+      // print(response);
+      var list = response.data['data'] as List;
       // print(list);
       busStops =
           list.map((bus_stop) => BusStopModel.fromJson(bus_stop)).toList();
