@@ -1,6 +1,6 @@
 class BusStopModel {
-  int? route;
-  int? orig_en;
+  String? route;
+  String? orig_en;
   String? dest_tc;
 
   BusStopModel({this.route, this.orig_en, this.dest_tc});
