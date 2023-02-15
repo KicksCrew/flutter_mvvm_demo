@@ -26,7 +26,9 @@ class BusStopsView extends StatelessWidget {
               return ListView.builder(
                 itemCount: bus_stops?.length,
                 itemBuilder: (context, index) => ListTile(
-                  title: Text(bus_stops![index].route),
+                  title: Text('route: ' + bus_stops![index].route),
+                  subtitle: Text(bus_stops[index].orig_en),
+                  trailing: Text(bus_stops[index].dest_tc),
                 ),
               );
             }
